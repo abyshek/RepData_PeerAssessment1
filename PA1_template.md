@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 Loading and Preprocessing the data
 ===========================================================================
 
@@ -6,22 +11,6 @@ Loading and Preprocessing the data
 # Load all the packages used in this project
 
 library(dplyr)
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-## 
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-## 
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 library(knitr)
 library(lattice)
 ```
@@ -141,7 +130,7 @@ hist(totalsteps$totalsteps, main="Histogram of the total number of steps taken
      each day", xlab="Total number of steps in a day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 
 **3. Calculate and report the mean and median of the total number of steps taken per day**
@@ -262,7 +251,7 @@ plot(avgsteps$interval,avgsteps$averagesteps, type="l", main ="Average steps
      number of steps taken")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png) 
 
 **2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?**
 
@@ -368,7 +357,7 @@ hist(totalsteps_new$totalsteps_new, main= "Total number of steps taken each
      day-Dataset with imputed NAs", xlab="Total number of steps in a day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
 
 **4(b). Calculate and report the mean and median total number of steps taken per day**
 
@@ -444,4 +433,4 @@ xyplot(finalset$totalsteps~finalset$interval|finalset$daytype, layout=c(1,2),
        type="l", xlab="interval", ylab="Average Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png) 
+![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
